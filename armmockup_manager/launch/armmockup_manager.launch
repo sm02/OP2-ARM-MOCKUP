@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<launch>    
+	<group ns="armmockup">
+		<param name="gazebo"                   value="false"    type="bool"/>
+		<param name="gazebo_robot_name"        value="armmockup"/>   
+		<param name="offset_file_path"         value="$(find armmockup_manager)/config/offset.yaml"/>
+		<param name="robot_file_path"          value="$(find armmockup_manager)/config/armmockup.robot"/>
+		<param name="init_file_path"           value="$(find armmockup_manager)/config/dxl_init.yaml"/>
+		<param name="device_name"              value="/dev/ttyUSB0"/>
+
+		<param name="init_pose_file_path"      value="$(find armmockup_manager)/config/ini_pose.yaml" />
+
+		<!-- Arm mockup Manager -->
+		<node pkg="armmockup_manager" type="armmockup_manager" name="armmockup_manager" output="screen">
+			<remap from="/robotis/dxl_torque" to="dxl_torque" />
+			<remap from="/robotis/status" to="status" />
+			<remap from="/robotis/base/ini_pose" to="base/ini_pose" />
+			<remap from="/robotis/enable_ctrl_module" to="enable_ctrl_module" />
+			<remap from="/robotis/enable_offset" to="enable_offset" />
+			<remap from="/robotis/goal_joint_states" to="goal_joint_states" />
+			<remap from="/robotis/present_joint_ctrl_modules" to="present_joint_ctrl_modules" />
+			<remap from="/robotis/present_joint_states" to="present_joint_states" />
+			<remap from="/robotis/set_control_mode" to="set_control_mode" />
+			<remap from="/robotis/set_joint_ctrl_modules" to="set_joint_ctrl_modules" />
+			<remap from="/robotis/set_joint_states" to="set_joint_states" />
+			<remap from="/robotis/sync_write_item" to="sync_write_item" />
+			<remap from="/robotis/write_control_table" to="write_control_table" />
+			<param name="angle_unit" value="30" />
+		</node>
+	</group>
+</launch>

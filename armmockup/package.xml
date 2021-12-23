@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>armmockup</name>
+  <version>0.1.0</version>
+  <description>
+    ROS packages for the robotis_op2 left arm mock-up (meta package)
+  </description>
+  <license>Apache 2.0</license>
+  <author email="sebastien.mougel@ac-amiens.fr">sm</author>
+  <maintainer email="sebastien.mougel@ac-amiens.fr">sm</maintainer>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>armmockup_manager</exec_depend>
+  <exec_depend>arm_driver</exec_depend>
+  <export><metapackage/></export>
+</package>

@@ -1,0 +1,17 @@
+l_sho_pitch :   # MX-28
+   return_delay_time        : 1		# item name : value
+   CW_angle_limit           : 0
+   CCW_angle_limit          : 4095
+   
+l_sho_roll :   # MX-28
+   return_delay_time        : 1
+   CW_angle_limit           : 0
+   CCW_angle_limit          : 4095
+
+l_el :   # MX-28
+   return_delay_time        : 1
+   CW_angle_limit           : 0
+   CCW_angle_limit          : 4095
+
+
+   

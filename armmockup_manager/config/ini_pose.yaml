@@ -1,0 +1,23 @@
+# time parameter
+
+mov_time : 6.0		# movement time
+
+via_num : 1		# via-point number
+via_time : [ 4.0 ] # via-point time
+
+
+# via-point pose [deg]
+
+via_pose :
+  1 : [ 0.0 ]       # l_sho_pitch
+  2 : [ 0.0 ]       # l_sho_roll
+  3 : [ 0.0 ]       # l_el
+
+
+# target pose [deg]
+
+tar_pose :
+  1 : 48            # l_sho_pitch
+  2 : 20            # l_sho_roll
+  3: -30           # l_el
+
